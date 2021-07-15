@@ -1,0 +1,68 @@
+.short_heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $bg_color;
+    display: block;
+    text-align: center;
+
+    @media (max-width: $media-md) {
+        font-size: 15px;
+    }
+
+    @media (max-width: $media-xs) {
+        font-size: 14px;
+    }
+}
+h2.mini_heading {
+    font-family: $font-2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 57px;
+    color: #591144;
+    margin: 0;
+    @media (max-width: $media-lg) {
+        font-size: 45px;
+        line-height: 52px;
+    }
+
+    @media (max-width: $media-md) {
+        font-size: 40px;
+        line-height: 47px;
+    }
+    @media (max-width: $media-xs) {
+        font-size: 33px;
+        line-height: 40px;
+    }
+}
+.mini_heading_2 {
+    font-family: $font-2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    color: $bg_color;
+    padding-bottom: 20px;
+    max-width: 500px;
+    @media (max-width: $media-md) {
+        font-size: 35px;
+        line-height: 39px;
+        padding-bottom: 15px;
+    }
+
+    @media (max-width: $media-sm) {
+        font-size: 33px;
+        line-height: 37px;
+        width: 100%;
+    }
+
+    @media (max-width: $media-xs) {
+        font-size: 28px;
+        line-height: 32px;
+        padding-bottom: 10px;
+    }
+}

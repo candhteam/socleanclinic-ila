@@ -1,0 +1,25 @@
+.blog-detail{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 700px;
+    @media (max-width: $media-lg) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media (max-width: $media-md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media (max-width: $media-xs) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    article{
+        p{
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

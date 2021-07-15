@@ -1,0 +1,150 @@
+.home_blockquotes {
+    min-height: 700px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media (max-width: $media-xlg) {
+        background-size: 350px auto;
+    }
+
+    @media (max-width: $media-lg) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media (max-width: $media-md) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-size: auto 100%;
+        position: relative;
+    }
+
+    background: url('/static/jpeg/legs.png') no-repeat top left;
+    background-size: 500px auto;
+
+    &::before {
+        @media (max-width: $media-md) {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: $white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 70%;
+        }
+    }
+
+    article {
+        padding-left: 200px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: $media-lg) {
+            padding-left: 100px;
+        }
+
+        @media (max-width: $media-md) {
+            padding-left: 0px;
+        }
+
+        .__main-text {
+            h2 {
+                text-align: right;
+
+                @media (max-width: $media-md) {
+                    text-align: center;
+                }
+            }
+
+            p {
+                text-align: right;
+
+                @media (max-width: $media-md) {
+                    text-align: center;
+                }
+            }
+        }
+
+        .__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -30px;
+            margin-right: -30px;
+
+            .__blocks {
+                width: 50%;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+
+                @media (max-width: $media-sm) {
+                    width: 100%;
+                }
+
+                @media (max-width: $media-xs) {
+                    padding-bottom: 15px;
+                }
+
+                figure {
+                    display: flex;
+                    margin: 0;
+
+                    img {
+                        width: 70px;
+                    }
+
+                    figcaption {
+                        padding-top: 20px;
+                        padding-left: 18px;
+
+                        h6 {
+                            margin: 0;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 22px;
+                            line-height: 27px;
+                            letter-spacing: 0.02em;
+                            color: $bg_color;
+                            padding-bottom: 7px;
+
+                            @media (max-width: $media-md) {
+                                font-size: 20px;
+                                line-height: 25px;
+                            }
+
+                            @media (max-width: $media-xs) {
+                                font-size: 18px;
+                                line-height: 23px;
+                            }
+
+                        }
+
+                        span {
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 18px;
+                            letter-spacing: 0.02em;
+                            color: $bg_color;
+                            display: block;
+
+                            @media (max-width: $media-md) {
+                                font-size: 13px;
+                                line-height: 17px;
+                            }
+
+                            @media (max-width: $media-xs) {
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.footer_fixed_image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 615px;
+    width: 100%;
+    background-attachment: fixed;
+
+    @media (max-width: $media-md) {
+        min-height: 500px;
+        background-attachment: unset;
+    }
+}

@@ -1,0 +1,155 @@
+.__img_content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $media-lg) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: $media-md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: $media-xs) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+
+        .____has_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(50% - 40px);
+            height: 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: $media-md) {
+                height: 300px;
+                position: relative;
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+
+        aside {
+            width: 50%;
+
+            @media (max-width: $media-md) {
+                width: 100%;
+            }
+
+            &:last-child {
+                padding-left: 40px;
+
+                @media (max-width: $media-md) {
+                    padding-left: 0;
+                    padding-top: 20px;
+                }
+            }
+
+            .__row {
+                padding-bottom: 40px;
+
+                .accordion {
+                    .__card_block {
+                        .__block_head {
+                            button {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 23px;
+                                color: $bg_color;
+                                // display: block;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                background: transparent;
+                                border: 0;
+                                padding: 0;
+
+                                padding-top: 15px;
+                                padding-bottom: 15px;
+
+                                @media (max-width: $media-md) {
+                                    font-size: 16px;
+                                    line-height: 21px;
+                                }
+
+                                @media (max-width: $media-xs) {
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                }
+
+                                &:hover,
+                                &:focus {
+                                    text-decoration: none;
+                                    outline: none;
+                                }
+
+                                &.collapsed {
+                                    .open_close {
+                                        &::after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                // &[aria-expanded="false"] {
+                                //     .open_close {
+                                //         &::after {
+                                //             opacity: 1;
+                                //         }
+                                //     }
+                                // }
+                            }
+
+                            .open_close {
+                                width: 28px;
+                                height: 28px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                border: 2px solid #C6437D;
+                                position: relative;
+
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    width: 12px;
+                                    height: 2px;
+                                    background: #C6437D;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    width: 12px;
+                                    height: 2px;
+                                    background: #C6437D;
+                                    transform: rotate(90deg);
+                                    position: absolute;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

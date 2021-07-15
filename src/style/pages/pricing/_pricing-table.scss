@@ -1,0 +1,195 @@
+.pricing_table {
+    padding-bottom: 100px;
+    position: relative;
+    top: -60px;
+    z-index: 2;
+
+    @media (max-width: $media-lg) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: $media-md) {
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: $media-xs) {
+        padding-bottom: 40px;
+    }
+
+    article {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                padding-left: 30px;
+                padding-right: 30px;
+
+                a {
+                    font-style: normal;
+                    font-weight: $bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: $bg_color;
+                    display: inline-block;
+                    background-color: $white;
+                    padding: 20px 100px;
+                    border-radius: 10px 10px 0 0;
+
+                    &.active {
+                        background-color: $bg_color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            border-top: 2px solid $bg_color;
+
+            .tab-pane {
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .table_scc {
+        display: block;
+
+        .__t_body {
+            width: 100%;
+            display: block;
+
+
+            &:first-child {
+                ._t_item {
+                    padding-top: 5px;
+                    @media (max-width: $media-xs) {
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                    }
+                }
+            }
+
+            ._t_item {
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: flex;
+                border-bottom: 1px solid $bg_color;
+
+                @media (max-width: $media-xs) {
+                    display: block;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                span {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $bg_color;
+                    display: block;
+                    padding-bottom: 15px;
+                    padding-top: 15px;
+                    // 
+                    width: 100%;
+
+                    @media (max-width: $media-md) {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+
+                    width: 40%;
+
+                    @media (max-width: $media-xs) {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 13px;
+                        line-height: 16px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    &:nth-child(1) {
+                        @media (max-width: $media-xs) {
+                            &::before {
+                                content: "Service";
+                                display: block;
+                                text-align: center;
+                                font-style: normal;
+                                font-weight: $bold;
+                                font-size: 14px;
+                                line-height: 18px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 35%;
+
+                        @media (max-width: $media-xs) {
+                            width: 100%;
+
+                            &::before {
+                                content: "Losse behandespanng";
+                                display: block;
+                                text-align: center;
+                                font-style: normal;
+                                font-weight: $bold;
+                                font-size: 14px;
+                                line-height: 18px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 25%;
+
+                        @media (max-width: $media-xs) {
+                            width: 100%;
+
+                            &::before {
+                                content: "Pakketprijs";
+                                display: block;
+                                text-align: center;
+                                font-style: normal;
+                                font-weight: $bold;
+                                font-size: 14px;
+                                line-height: 18px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    &.__t_head {
+                        font-style: normal;
+                        font-weight: $bold;
+                        font-size: 16px;
+                        line-height: 20px;
+
+                        @media (max-width: $media-md) {
+                            font-size: 15px;
+                            line-height: 19px;
+                        }
+
+                        @media (max-width: $media-xs) {
+                            display: none;
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}

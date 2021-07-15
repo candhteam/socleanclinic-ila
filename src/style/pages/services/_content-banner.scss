@@ -1,0 +1,175 @@
+.content_banner {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    min-height: 700px;
+    @media (max-width: $media-md) {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    @media (max-width: $media-xs) {
+        padding-bottom: 40px;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        // margin-right: -40px;
+        // margin-left: -40px;
+
+        aside {
+            width: 50%;
+            @media (max-width: $media-md) {
+                width: 100%;
+            }
+
+            &:first-child {
+                padding-right: 40px;
+                @media (max-width: $media-md) {
+                    padding-right: 0;
+                    padding-bottom: 40px;
+                }
+            }
+
+            &:last-child {
+                padding-left: 40px;
+                @media (max-width: $media-md) {
+                    padding-left: 0;
+                }
+            }
+
+            .__content {
+                span {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: $bg_color;
+
+                    @media (max-width: $media-lg) {
+                        font-size: 17px;
+                        line-height: 23px;
+                    }
+
+                    @media (max-width: $media-md) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    @media (max-width: $media-xs) {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+
+                h2 {
+                    padding-bottom: 30px;
+                    padding-top: 10px;
+                    @media (max-width: $media-md) {}
+                }
+            }
+
+            .banner_img_blocks {
+                position: relative;
+                display: flex;
+
+                .line_text {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    height: auto;
+                    display: flex;
+                    width: auto;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 2px;
+                        height: 100%;
+                        background: $red-2;
+                    }
+
+                    span {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 23px;
+                        display: flex;
+                        align-items: flex-end;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: $bg_color;
+                        writing-mode: tb-rl;
+                        transform: rotate(180deg);
+
+                        @media (max-width: $media-md) {
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+
+                        @media (max-width: $media-xs) {
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+
+                .__blocks {
+                    padding-left: 40px;
+                    @media (max-width: $media-xs) {
+                        padding-left: 30px;
+                    }
+
+                    figure {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 40px;
+                        @media (max-width: $media-xs) {
+                            padding-bottom: 20px;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        img{
+                            width: 60px;
+                        }
+
+                        figcaption {
+                            padding-left: 20px;
+
+                            span {
+                                font-family: $font-2;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 20px;
+                                line-height: 23px;
+                                letter-spacing: 0.02em;
+                                color: $bg_color;
+
+                                @media (max-width: $media-lg) {
+                                    font-size: 17px;
+                                    line-height: 22px;
+                                }
+
+                                @media (max-width: $media-md) {
+                                    font-size: 18px;
+                                    line-height: 21px;
+                                }
+
+                                @media (max-width: $media-xs) {
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

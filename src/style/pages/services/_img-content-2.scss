@@ -1,0 +1,107 @@
+.__img_content_2 {
+
+
+    .__img_content_2_container {
+        padding-bottom: 300px;
+        position: relative;
+
+        @media (max-width: $media-xlg) {
+            padding-bottom: 150px;
+        }
+
+        @media (max-width: $media-md) {
+            padding-bottom: 0;
+        }
+    }
+
+    article {
+        h3 {}
+
+        .__row {
+            display: flex;
+            flex-wrap: wrap;
+
+            aside {
+                width: 50%;
+
+                @media (max-width: $media-md) {
+                    width: 100%;
+                }
+
+                &:first-child {
+                    padding-right: 50px;
+
+                }
+
+                .__bg__img {
+                    width: 50%;
+                    display: block;
+                    height: calc(100% - 300px);
+                    background: url('/static/png/bg_img_6.png') no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                    right: 0;
+                    top: 300px;
+
+                    @media (max-width: $media-xlg) {
+                        // top: 150px;
+                        // height: calc(100% - 150px);
+                    }
+
+                    @media (max-width: $media-md) {
+                        position: relative;
+                        top: 0;
+                        height: 300px;
+                        max-width: 500px;
+                        width: 100%;
+                        margin-top: 40px;
+                    }
+                }
+
+                .__box {
+                    background: $bg_color;
+                    border-radius: 10px;
+                    padding: 44px 40px;
+                    max-width: 350px;
+                    position: relative;
+                    z-index: 2;
+                    margin-left: 150px;
+
+                    @media (max-width: $media-lg) {
+                        margin-left: 120px;
+                    }
+
+                    @media (max-width: $media-md) {
+                        margin-left: 0;
+                        margin-top: 40px;
+                    }
+
+                    .box_head {
+                        display: block;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 23px;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        padding-bottom: 15px;
+                    }
+
+                    p {
+                        color: $white;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        color: $white;
+
+                        p {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
